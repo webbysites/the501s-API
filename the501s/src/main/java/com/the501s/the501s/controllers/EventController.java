@@ -26,7 +26,7 @@ public class EventController {
     @RequestMapping(value="/dates", method = RequestMethod.GET)
     public Object getEvents() {
         Object events = restTmeplate.getForObject(token, Object.class);
-        System.out.println(events);
+        // System.out.println(events);
         return events;
     }
     
