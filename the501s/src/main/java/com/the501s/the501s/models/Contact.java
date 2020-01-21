@@ -3,26 +3,25 @@ package com.the501s.the501s.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "vote-contact")
-public class VoteContact {
+@Document("contact")
+public class Contact {
 
     @Id
     private String id;
     private String firstName;
     private String lastName;
     private String email;
-    private String comment;
+    private String requests;
 
-    public VoteContact() {
+    public Contact() {
     }
 
-
-    public VoteContact(String id, String firstName, String lastName, String email, String comment) {
+    public Contact(String id, String firstName, String lastName, String email, String requests) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.comment = comment;
+        this.requests = requests;
     }
 
     public String getId() {
@@ -57,12 +56,12 @@ public class VoteContact {
         this.email = email;
     }
 
-    public String getComment() {
-        return this.comment;
+    public String getRequests() {
+        return this.requests;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setRequests(String requests) {
+        this.requests = requests;
     }
 
     @Override
@@ -71,10 +70,9 @@ public class VoteContact {
             " id='" + getId() + "'" +
             ", firstName='" + getFirstName() + "'" +
             ", lastName='" + getLastName() + "'" +
-            ", email='" + getEmail() + "'" +
-            ", comment= '" + getComment() + "'" +
+            ", email='" + getEmail() + "''" +
+            ", requests='" + getRequests() + "'" +
             "}";
     }
     
-
 }
