@@ -11,17 +11,17 @@ public class Contact {
     private String firstName;
     private String lastName;
     private String email;
-    private String requests;
+    private String message;
 
     public Contact() {
     }
 
-    public Contact(String id, String firstName, String lastName, String email, String requests) {
+    public Contact(String id, String firstName, String lastName, String email, String message) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.requests = requests;
+        this.message = message;
     }
 
     public String getId() {
@@ -56,12 +56,12 @@ public class Contact {
         this.email = email;
     }
 
-    public String getRequests() {
-        return this.requests;
+    public String getMessage() {
+        return this.message;
     }
 
-    public void setRequests(String requests) {
-        this.requests = requests;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class Contact {
             ", firstName='" + getFirstName() + "'" +
             ", lastName='" + getLastName() + "'" +
             ", email='" + getEmail() + "''" +
-            ", requests='" + getRequests() + "'" +
+            ", requests='" + getMessage() + "'" +
             "}";
     }
     

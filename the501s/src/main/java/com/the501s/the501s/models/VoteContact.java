@@ -8,8 +8,7 @@ public class VoteContact {
 
     @Id
     private String id;
-    private String firstName;
-    private String lastName;
+    private String name;
     private String email;
     private String comment;
 
@@ -17,10 +16,9 @@ public class VoteContact {
     }
 
 
-    public VoteContact(String id, String firstName, String lastName, String email, String comment) {
+    public VoteContact(String id, String name, String email, String comment) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
         this.email = email;
         this.comment = comment;
     }
@@ -33,20 +31,12 @@ public class VoteContact {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return this.firstName;
+    public String getName() {
+        return this.name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -69,8 +59,7 @@ public class VoteContact {
     public String toString() {
         return "{" +
             " id='" + getId() + "'" +
-            ", firstName='" + getFirstName() + "'" +
-            ", lastName='" + getLastName() + "'" +
+            ", firstName='" + getName() + "'" +
             ", email='" + getEmail() + "'" +
             ", comment= '" + getComment() + "'" +
             "}";
