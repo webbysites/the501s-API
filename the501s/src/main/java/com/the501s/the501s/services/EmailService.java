@@ -96,7 +96,7 @@ public class EmailService {
                 "</body></html>";
             message.setContent(body, "text/html");
             Transport.send(message);
-            System.out.println("Contact request form email sent!");
+            System.out.println("request form email sent!");
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
